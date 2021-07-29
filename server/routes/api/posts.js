@@ -56,7 +56,7 @@ router.delete('/:id', async (req, res) => {
 async function loadPostsCollection(
   successCallback) {
   mongodb.MongoClient.connect(uri, function (err, dbInstance) {
-    const dbObject = dbInstance.db('vue-express');
+    const dbObject = dbInstance.db('nuxt-express');
     const dbCollection = dbObject.collection('posts');
     console.log("[MongoDB connection] SUCCESS");
     successCallback(dbCollection);
